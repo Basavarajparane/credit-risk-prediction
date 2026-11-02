@@ -1,0 +1,10 @@
+xgboost==3.4.1
+scikit-learn==1.9.0
+pandas==2.2.3
+numpy==2.2.1
+shap==0.54.1
+imbalanced-learn==0.14.2
+torch==2.14.1
+fastapi
+uvicorn
+joblib
