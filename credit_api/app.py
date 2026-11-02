@@ -3,6 +3,7 @@ import joblib
 import pandas as pd
 from fastapi import FastAPI
 from pydantic import BaseModel
+from fastapi.responses import FileResponse
 
 art = joblib.load("model_artifacts.joblib")
 model = art["model"]
@@ -39,7 +40,7 @@ def prepare(features: dict) -> pd.DataFrame:
 
 @app.get("/")
 def home():
-    return {"message": "Credit Risk API is running. Go to /docs to try it."}
+    return FileResponse("index.html")
 
 
 @app.post("/predict")
